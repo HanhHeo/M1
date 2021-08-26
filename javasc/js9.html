@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chuyển đổi tiền tệ</title>
 </head>
+<style>
+    td,
+    th {
+        width: 200px;
+        text-align: left;
+    }
+</style>
+
 <body>
-    
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+
+        </tr>
+        <tr>
+            <td><input type="text" id="money"></td>
+            <td>
+                <select id="input">
+                    <option value="VN">Việt Nam</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </td>
+            <td>
+                <select id="output">
+                    <option value="USD">USD</option>
+                    <option value="VN">Việt Nam</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </td>
+            <td><input type="button" value="Convert" style="background-color: blue; color:white" onclick="money()"></td>
+        </tr>
+        <tr>
+            <td>
+                <font color="blue">Result: <span id="result"></span></font>
+            </td>
+
+        </tr>
+    </table>
+    <script>
+        function money() {
+            let money = document.getElementById("money").value;
+            let input = document.getElementById("input").value;
+            let output = document.getElementById("output").value;
+            let result = "";
+
+
+            
+            if (input == "VN" && output =="USD") {
+                result = money / 23000;
+            } else if (input == "VN" && output == "VN") {
+                result = money;
+            } else if (input == "VN" && output == "EUR") {
+                result = money / 28000;
+            } else if (input == "VN" && output == "GBP") {
+                result = money / 35000;
+            }     
+            
+            
+
+            else if (input == "USD" && output == "VN") {
+                result = money * 23000;
+            }
+            else if (input == "USD" && output == "EUR") {
+                result = money * 0.85 ;
+            }
+            else if (input == "USD" && output == "GBP") {
+                result = money * 0.73;
+            }
+            else if (input == "USD" && output =="USD") {
+                result = money;
+            }
+
+
+
+            else if (input == "EUR" && output == "VN") {
+                result = money * 28000;
+            }
+            else if (input == "EUR" && output == "EUR") {
+                result = money ;
+            }
+            else if (input == "EUR" && output == "GBP") {
+                result = money * 0.86;
+            }
+            else if (input == "EUR" && output =="USD") {
+                result = money / 0.85;
+            }
+
+
+            else if (input == "GBP" && output == "VN") {
+                result = money * 35000;
+            }
+            else if (input == "GBP" && output == "EUR") {
+                result = money /0.86;
+            }
+            else if (input == "GBP" && output == "GBP") {
+                result = money ;
+            }
+            else if (input == "GBP" && output =="USD") {
+                result = money / 0.73;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+    </script>
+
+
 </body>
+
 </html>
