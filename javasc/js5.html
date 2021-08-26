@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập điểm</title>
+</head>
+ <script>
+     var inputMath;
+     var inputChemistry;
+     var inputBiological;
+     inputMath = prompt('Enter the Math');
+     inputChemistry = prompt('Enter the Chemistry');
+     inputBiological = prompt('Enter the Biological');
+     var scoreMath = Number(inputMath);
+     var scoreChemistry = Number(inputChemistry);
+     var scoreBiological = Number(inputBiological);
+
+     var Medium = (scoreMath + scoreChemistry + scoreBiological) / 3;
+     document.write('The Medium is: ' + Medium)
+
+ </script>
+    
+<body>
+    
+</body>
+</html>
