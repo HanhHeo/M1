@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        td,th {
+             text-align: left;
+        }
+    </style>
+        <h1><strong>Caculator</strong></h1>
+       <table>
+        <tr>
+            <td><input type="text" id="number1">
+            <input type="text" id="number2"></td>
+            
+            
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Addition(+)" onclick="add()">
+            
+            <input type="button" value="Subtraction(-)" onclick="sub()">
+            <input type="button" value="Multiplication(X)" onclick="mul()">
+            <input type="button" value="Division(/)" onclick="div()"></td>
+        </tr>
+        <tr>
+            <td>Result Division: <span id="Result_Division"></span></td>
+            
+        </tr>
+        <script>
+            function add(){
+                let number1 = document.getElementById("number1").value;
+                let number2 = document.getElementById("number2").value;
+                number1= parseInt(number1);
+                number2= parseInt(number2);
+                 let result = "";
+                 result = number1 + number2 ;
+                 document.getElementById('Result_Division').innerHTML= result;
+            }
+            function sub(){
+                let number1 = document.getElementById("number1").value;
+                let number2 = document.getElementById("number2").value;
+                number1= parseInt(number1);
+                number2= parseInt(number2);
+                 let result = "";
+                 result = number1 - number2 ;
+                 document.getElementById('Result_Division').innerHTML= result;
+            }
+            function mul(){
+                let number1 = document.getElementById("number1").value;
+                let number2 = document.getElementById("number2").value;
+                number1= parseInt(number1);
+                number2= parseInt(number2);
+                 let result = "";
+                 result = number1 * number2 ;
+                 document.getElementById('Result_Division').innerHTML= result;
+            }
+            function div(){
+                let number1 = document.getElementById("number1").value;
+                let number2 = document.getElementById("number2").value;
+                number1= parseInt(number1);
+                number2= parseInt(number2);
+                 let result = "";
+                 if(number2 == 0) {
+                     result= "error";
+                 }else{
+                    result = number1 / number2 ;
+                 }
+               
+                 document.getElementById('Result_Division').innerHTML= result;
+            }
+
+            
+
+        </script>
+    </table>
+</body>
+</html>
