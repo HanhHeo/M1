@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .w-100{
+        width: 100%;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="7">
+                <input type="text" value="0" id="number" class="w-100">
+            </td>
+
+        </tr>
+        <tr>
+            <td bgcolor="grey"><button type="button" id="Rad" class="w-100">Rad</button></td>
+            <td></td>
+            <td bgcolor="grey"><button type="button" id="x_giai_thua" class="w-100">x!</td>
+            <td bgcolor="grey"><button type="button" id="mo_ngoac" class="w-100">(</td>
+            <td bgcolor="grey"><button type="button" id="dong_ngoac" class="w-100">)</button></td>
+            <td bgcolor="grey"><button type="button" id="phan_tram" class="w-100">%</button></td>
+            <td bgcolor="grey"><button type="button" id="AC" class="w-100">AC</button></td>
+            </tr>
+        <tr>
+            <td bgcolor="grey"><button type="button" id="lvn" class="w-100">lvn</button></td>
+            <td bgcolor="grey"><button type="button" id="sin" class="w-100">sin</button></td>
+            <td bgcolor="grey"><button type="button" id="ln" class="w-100">ln</button></td>
+            <td><button type="button" id="so_7" onclick="setNumber(7)" class="w-100">7</button></td>
+            <td><button type="button" id="so_8" onclick="setNumber(8)" class="w-100">8</button></td>
+            <td><button type="button" id="so_9" onclick="setNumber(9)" class="w-100">9</button></td>
+            <td bgcolor="grey"><button type="button" id="chia" class="w-100">&#247;</button></td>
+        </tr>
+        <tr>
+            <td bgcolor="grey"><button type="button" id="pi" class="w-100">π </button></td>
+            <td bgcolor="grey"><button type="button" id="cos" class="w-100">cos</button></td>
+            <td bgcolor="grey"><button type="button" id="log" class="w-100">log</button></td>
+            <td><button type="button" id="so_4" class="w-100">4</button></td>
+            <td><button type="button" id="so_5" class="w-100">5</button></td>
+            <td><button type="button" id="so_6" class="w-100">6</button></td>
+            <td bgcolor="grey"><button type="button" id="dau_nhan" class="w-100">x</button></td>
+        </tr>
+        <tr>
+            <td bgcolor="grey"><button type="button" id="e" class="w-100">e</button></td>
+            <td bgcolor="grey"><button type="button" id="e" class="w-100">e</button></td>
+            <td bgcolor="grey"><button type="button" id="can_bac_hai" class="w-100">√</button></td>
+            <td><button type="button" id="so_1" class="w-100">1</button></td>
+            <td><button type="button" id="so_2" class="w-100">2</button></td>
+            <td><button type="button" id="so_3" class="w-100">3</button></td>
+            <td bgcolor="grey"><button type="button" id="dau_tru" class="w-100">-</button></td>
+        </tr>
+        <tr>
+            <td bgcolor="grey"><button type="button" id="Ans" class="w-100">Ans</button></td>
+            <td bgcolor="grey"><button type="button" id="Exp" class="w-100">Exp</button></td>
+            <td bgcolor="grey">
+                <button type="button" id="e">
+                    <span>x</span>
+                    <span style="font-size: 10px;margin-top: -2px;padding-top: -5px;position: absolute;">y</span>
+                </button>
+            </td>
+            <td><button type="button" id="so_khong" class="w-100">0</button></td>
+            <td><button type="button" id="dau_cham" class="w-100">.</button></td>
+            <td><button type="button" id="dau_bang" style="background-color: blue; color:white;" class="w-100">=</button></td>
+            <td bgcolor="grey"><button type="button" id="dau_cong" class="w-100">+</button></td>
+        </tr>
+    </table>
+    <script>
+        function setNumber(number) {
+            let _this = document.getElementById('number').value
+            console.log(_this)
+            if(_this==0){
+                document.getElementById('number').value = number
+            }
+            else {
+                document.getElementById('number').value += number
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
