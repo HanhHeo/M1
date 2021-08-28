@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày</title>
+</head>
+
+<body>
+    <input type="text" value="" id="number">
+    <button type="button" onclick="tinh()">Tính số ngày</button>
+    <h1 id="month"></h1>
+
+    <script>
+        function tinh() {
+            let month = document.getElementById("number").value
+            Day(month)
+        }
+        function Day(month) {
+
+            switch (parseInt(month)) {
+                case 1:
+                    // code block
+                    document.getElementById('month').innerHTML = "Tháng 1 có 31 ngày";
+
+                    break;
+                case 2:
+                    document.getElementById('month').innerHTML = "Tháng 2 có 28 ngày 29 ngày";
+                    // code block
+                    break;
+                case 3:
+                    // code block
+                    document.getElementById('month').innerHTML = "Tháng 3 có 31 ngày";
+
+                    break;
+                case 4:
+
+                    document.getElementById('month').innerHTML = "Tháng 4 có 30 ngày";
+                    break;
+                case 5:
+
+                    document.getElementById('month').innerHTML = "Tháng 5 có 31 ngày";
+
+                    break;
+                case 6:
+
+                    document.getElementById('month').innerHTML = "Tháng 6 có 31 ngày";
+                    break;
+                case 7:
+
+                    document.getElementById('month').innerHTML = "Tháng 7 có 31 ngày";
+
+                    break;
+                case 8:
+
+                    document.getElementById('month').innerHTML = "Tháng 8 có 31 ngày";
+                    break;
+                case 9:
+
+                    document.getElementById('month').innerHTML = "Tháng 9 có 30 ngày";
+                    break;
+                case 10:
+
+                    document.getElementById('month').innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                case 11:
+
+                    document.getElementById('month').innerHTML = "Tháng 11 có 30 ngày";
+
+                    break;
+                case 12:
+
+                    document.getElementById('month').innerHTML = "Tháng 12 có 31 ngày";
+                    break;
+                default:
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
