@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me</title>
+</head>
+<body>
+    <div>
+        <img width="300px" src="https://scontent-sin6-3.xx.fbcdn.net/v/t1.6435-9/37740312_1302439456552590_6344649393299259392_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=lVPCf1HafYwAX850DEC&tn=on9rBEU-86AUfBKH&_nc_ht=scontent-sin6-3.xx&oh=e9413839a8d248616d2b980bda04ad42&oe=61513B8D" alt="">
+        <img width="100px" src="https://png.pngtree.com/png-clipart/20190925/original/pngtree-red-cartoon-vs-competition-png-image_4983555.jpg" alt="">
+        <img width="250px" src="https://2sao.vietnamnetjsc.vn/images/2020/04/09/14/21/loc-phu-ho-01.jpg">
+    </div>
+    <h1 text align="center">Hạnh đẹp hơn Lộc Fuho đúng không?</h1>
+    <br>
+    <input type="button" value=" YES " onclick="yesClick()" style="position:absolute;right: 643px;bottom: 223px;">
+    <input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position: absolute;left: 628px;top: 418px;">
+    <script>
+        function yesClick()
+        {
+            alert("Yes. you are right ");
+        }
+        function noHover()
+        {
+            let x = Math.round(Math.random() * window.innerWidth);
+            let y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('btnNo').style.left = x + 'px';
+            document.getElementById('btnNo').style.top = y + 'px';
+        }
+        </script>
+ 
+            
+    
+</body>
+</html>
