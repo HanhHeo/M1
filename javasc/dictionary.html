@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Dictionary</h2>
+  <input type="text" value="" id="D1">
+  <input type="button" id="D2" value="Translate" onclick="trans()">
+  <h1 id="result"><br></h1>
+  <script>
+    let EN = ["Dog", "Cat", "Mouse","Fox","Bird"];
+    let VN = ["chó", "mèo", "chuột","Cáo","Chim"];
+
+    function trans() {
+      res = document.getElementById("D1").value;
+       console.log(res);
+       key = EN.indexOf(res);
+       VNs  = VN[key];
+       document.getElementById("result").innerHTML = VNs;
+
+    }
+  </script>
+</body>
+
+</html>
