@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi giữa feet và meter</title>
+</head>
+
+<body>
+    <style>
+        td,
+        th {
+            width: 300px;
+            text-align: left;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Distance</th>
+            <th>To Distance </th>
+
+        </tr>
+        <tr>
+            <td><input type="text" id="number"></td>
+            <td>
+                <select id="input">
+                    <option value="Meter">Meter</option>
+                    <option value="Feet">Feet</option>
+                </select>
+            </td>
+            <td>
+                <select id="output">
+                    <option value="Feet">Feet</option>
+                    <option value="Meter">Meter</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" value="Convert" onclick="Check()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="result">Result :</span>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Check() {
+            let number = document.getElementById("number").value;
+            let input = document.getElementById("input").value;
+            let output = document.getElementById("output").value;
+            let result = "";
+            if (input == "Meter" && output == "Feet") {
+                result = number * 3.279;
+            } else if
+                (input == "Meter" && output == "Meter") {
+                result = number;
+            } else if 
+                 (input == "Feet" && output == "Meter") {
+                  result = number *  0.305;   
+            } else if
+                (input == "Feet" && output == "Feet") 
+                  result = number;
+        
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
