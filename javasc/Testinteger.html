@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <input type="text" value="" id = "number"/>
+    <input type="button" value="Kiểm tra" onclick="isprime()"/><br>
+    <h1 id = "k_q"></h1>
+    <script>
+    function isprime() {
+        let this_number = parseInt(document.getElementById("number").value); 
+        let flag = true;
+
+        if (this_number < 2) {
+            flag = false;
+        } else {
+            if (this_number == 2) {
+             flag = true;
+        }
+          else 
+        {
+            for (let i = 2; i < this_number ; i++) {
+                if (this_number % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+    }
+        if (flag == true) {
+            document.getElementById("k_q").innerHTML= `${this_number} là số nguyên tố`
+        } else {
+            document.getElementById("k_q").innerHTML = `${this_number} không phải là số nguyên tố`
+        }
+    }
+</script>
+</body>
+
+</html>
