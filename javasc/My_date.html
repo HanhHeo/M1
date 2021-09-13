@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Date</title>
+</head>
+
+<body>
+    <script>
+        // tạo lớp
+        let MyDate = function (ts_day, ts_month, ts_year) {
+            // tầng thuộc tính
+            this.day = ts_day;
+            this.month = ts_month;
+            this.year = ts_year;
+        };
+        // tầng phương thức
+        // phương thức trả về giá trị thuộc tính day
+        this.getDay = function () {
+            return this.day;
+        }
+        // phương thức trả về giá trị thuộc tính month
+        this.getMonth = function () {
+            return this.month;
+        }
+        // phương thức trả về giá trị thuộc tính year
+        this.getYear = function () {
+            return this.year;
+        };
+        // phương thức thiết lập giá trị thuộc tính day
+        this.setDay = function (ts_day) {
+            this.day = day;
+        }
+         // phương thức thiết lập giá trị thuộc tính month
+        this.setMonth = function (ts_month) {
+            this.month = month;
+        }
+         // phương thức thiết lập giá trị thuộc tính year
+        this.setYear = function (ts_year) {
+            this.year = year;
+        }
+        // phương thức thiết lập giá trị của thuộc tính da,month,year
+        this.setDate = function (ts_day, ts_month, ts_year) {
+            this.day = ts_day;
+            this.month = ts_month;
+            this.year = ts_year;
+   
+            this.toString = function () {
+                return `Ngày ${this.day} Tháng ${this.month} Năm ${this.year}`;
+            }
+        };
+        let my_date = new MyDate(13, 9, 2021);
+            // console.log(my_date);
+        my_date.day = 13;
+        my_date.month = 9;
+        my_date.year = 2021;
+      console.log( my_date.day + "/" + my_date.month + "/" + my_date.year);
+    </script>
+</body>
+
+</html>
