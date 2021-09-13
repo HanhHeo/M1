@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+
+<body>
+    <script>
+        let MyCircle = function (ts_radius, ts_color) {
+            // khai báo thuộc tính
+            this.radius = ts_radius;
+            this.color = ts_color;
+
+            // khai báo phương thức
+            this.getRadius = function () {
+                return this.radius;
+            }
+            this.getColor = function () {
+                return this.color;
+            }
+            this.getArea = function () {
+                console.log(Math.PI);
+                return Math.PI * this.radius * this.radius;
+            }
+            // phương thức thiết lập giá trị thuộc tính raidus
+            this.setRadius = function (ts_radius) {
+                this.radius = ts_radius;
+            }
+            this.setColor = function (ts_color) {
+                this.color = ts_color;
+            }
+            // phương thức thiết lập giá trị thuộc tính của radius,color
+            this.setCircle = function (ts_radius, ts_color) {
+                this.radius = ts_radius;
+                this.color = ts_color;
+            }
+
+
+        };
+
+        let my_circle = new MyCircle(10, "red");
+
+        alert(my_circle.getArea());
+         
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
