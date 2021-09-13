@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng mô tả hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        let Rectangle = function(ts_widh,ts_height) {
+            this.width = ts_widh;
+            this.height = ts_height;
+            // khai báo phương thức
+            this.getWidth = function() {
+                return this.width ;
+            }
+            this.getHeight = function() {
+                return this.height;
+            }
+            this.getArea = function() {
+                return  this.width * this.height ;
+            }
+            this.getPerimeter = function() {
+                return (this.width + this.height) * 2 ;
+            }
+            // phương thức thiết lập giá trị thuộc tính width
+            this.setWidth = function(ts_width) {
+                 this.width = ts_width;
+            }
+            // phương thức thiết lập giá trị thuộc tính height
+            this.setHeight = function(ts_height) {
+                this.height = ts_height;
+            }
+            // phương thức thiết lập giá trị thuộc tính của height,width
+            this.setRectangular = function(ts_widh,ts_height) {
+                this.width = ts_width;
+                this.height = ts_height;
+                console.log(this.setRectangular);
+            }
+            
+
+        };
+        let my_rectangle = new Rectangle(5,6);
+        document.write ( "diện tích HCN : " + my_rectangle.getArea() + "<br/>");
+        document.write ( "chu vi HCN : " + my_rectangle.getPerimeter());
+    </script>
+</body>
+</html>
