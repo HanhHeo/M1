@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+
+<body>
+    <script>
+        let Mobile = function (name) {
+            this.ten_dien_thoai = name;
+            this.tin_nhan_dang_soan_thao = "";
+            this.trang_thai_pin = 100;
+            this.hop_thu_den = [];
+            this.tin_nhan_da_gui = [];
+            this.trang_thai_dien_thoai = false;
+            this.check = function () {
+                if (this.trang_thai_dien_thoai == false) {
+                    alert("Please open iphone");
+                }
+            }
+            this.bat_dien_thoai = function () {
+                this.trang_thai_pin--;
+                this.trang_thai_dien_thoai = true;
+            }
+            this.sac_dien_thoai = function () {
+                this.trang_thai_pin++;
+            }
+            this.soan_tin_nhan = function (noi_dung) {
+                this.check();
+                this.trang_thai_pin--;
+                this.tin_nhan_dang_soan_thao = noi_dung;
+            }
+            this.nhan_tin_nhan = function (noi_dung) {
+                this.check();
+                this.trang_thai_pin--;
+                this.hop_thu_den.push(noi_dung);
+            }
+            this.gui_tin_nhan = function(obj_Mobile) {
+                this.check();
+                this.trang_thai_pin--;
+                this.tin_nhan_da_gui.push(this.tin_nhan_dang_soan_thao);
+                obj_Mobile.nhan_tin_nhan(this.tin_nhan_dang_soan_thao);
+            }
+            this.xem_hop_thu_den = function () {
+                this.check();
+                this.trang_thai_pin--;
+                let view = "";
+                for (i = 0; i < this.hop_thu_den.length; i++) {
+                    view += this.hop_thu_den[i] + "<br/>";
+                }
+                return view;
+            }
+            this.xem_tin_da_gui = function () {
+                this.check();
+                this.trang_thai_pin--;
+                let view = "";
+                for (i = 0; i < this.tin_nhan_da_gui.length; i++) {
+                    view += this.tin_nhan_da_gui[i] + "<br/>";
+                }
+                return view;
+            }
+        };
+        let Iphone = new Mobile("Iphone");
+        let Nokia = new Mobile("Nokia");
+        Nokia.bat_dien_thoai();
+        Nokia.sac_dien_thoai();
+        Nokia.soan_tin_nhan("Cho mượn 5 củ");
+        Nokia.gui_tin_nhan(Iphone);
+        document.write("<hr>");
+        document.write(Nokia.xem_tin_da_gui());
+        document.write("<hr>");
+        document.write(Iphone.xem_hop_thu_den());
+       console.log(Nokia);
+       console.log("<hr>");
+       console.log(Iphone);
+        
+    </script>
+</body>
+
+</html>
