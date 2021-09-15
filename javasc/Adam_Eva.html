@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô phỏng chuyện Adam và Eva</title>
+</head>
+
+<body>
+    <script>
+        let Apple = function () {
+            this.weight = 10;
+
+            this.decrease = function () {
+
+                return this.weight--;
+
+            }
+            this.isEmpty = function () {
+                if (this.weight == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+        };
+        let Human = function (name, weight) {
+            this.name = name;
+            this.gender = false;
+            this.weight = weight;
+            this.human = function () {
+                return this.human;
+            }
+            this.isMale = function () {
+                if (this.gender == "male") {
+                    return true;
+                } else {
+                    return false;
+                }
+
+            }
+
+            this.setGender = function (gender) {
+                this.gender = gender;
+                console.log(gender);
+            }
+
+
+
+            this.eat = function (ts_apple) {
+                ts_apple.decrease();
+                this.weight++;
+                console.log(ts_apple);
+            }
+            this.say = function (ts_say) {
+                this.say = ts_say;
+                console.log(ts_say);
+            }
+            this.getName = function () {
+                return this.name;
+            }
+            this.setName = function (ts_name) {
+                this.name = ts_name;
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+
+            this.setWeight = function (number) {
+                this.weight = number;
+            }
+        };
+        let apple = new Apple();
+
+        let Eva = new Human("Eva", 10);
+        Eva.setGender(false);
+        Eva.eat(apple);
+        Eva.say("Ăn em đi anh");
+        console.log(Eva);
+
+        let Adam = new Human("Adam", 10);
+        Adam.setGender(true);
+        Adam.eat(apple);
+        Adam.say("OK em");
+        console.log(Adam);
+    </script>
+</body>
+
+</html>
