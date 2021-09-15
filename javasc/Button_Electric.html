@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công tắc và bóng đèn</title>
+</head>
+
+<body>
+    <script>
+        let SwitchButton = function (Electriclamp) {
+            this.lamp = ElectricLamp;
+            this.status = false;
+        
+            this.connectToLamp = function (ElectricLamp) {
+                this.lamp = ElectricLamp;
+
+            }
+            this.switchOff = function () {
+                this.status = false;
+            }
+            this.switchOn = function () {
+                this.status = true;
+            }
+        }
+
+        let ElectricLamp = function () {
+            this.status = false;
+           
+            this.turnOn = function () {
+                this.status = true;
+
+            }
+            this.turnOff = function () {
+                this.status = false;
+            }
+
+        };
+
+        let my_switchbutton = new SwitchButton();
+
+        let my_electriclamp = new ElectricLamp();
+
+
+
+
+        my_switchbutton.connectToLamp(my_electriclamp);
+      
+
+        my_switchbutton.switchOn();
+        my_electriclamp.turnOn();
+        
+        
+        my_switchbutton.switchOff();
+        my_electriclamp.turnOff();
+
+        console.log(my_electriclamp);
+        console.log(my_switchbutton);
+    </script>
+</body>
+
+</html>
